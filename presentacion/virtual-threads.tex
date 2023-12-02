@@ -45,9 +45,16 @@
   \end{frame}
 }
 
+
+\usepackage{tikz}
 \usebackgroundtemplate%
-{%
-    \includegraphics[width=\paperwidth,height=\paperheight]{img/}%
+{
+  \tikz[overlay,remember picture] 
+  \node[opacity=0.2, at=(current page.south east),anchor=south east,inner sep=.3em] {
+    \includegraphics[width=10em]{img/qr-code}
+    \vspace{10em}
+    };
+    %\includegraphics[width=10em,right]{}
 }
 
 \title[Virtual Threads] 
@@ -187,6 +194,7 @@ var future = supplyasync(() -> userService.findUserByName(name))
   \item Livianos.
   \item Código legible.
   \item No se necesita hacer pool de ellos.
+  \item Son todos de tipo daemon.
   \item Revisitemos el ejemplo anterior.
  \end{itemize}
 
@@ -327,12 +335,22 @@ public static void sleep(long millis) throws InterruptedException {
 
 \section{Ejemplo}
 \begin{frame}
+
     \centering
     \textbf{\Huge{Coding time!} }
 \end{frame}
 
 
+\usebackgroundtemplate{}%
+\section{Preguntas?}
+\begin{frame}
 
+    \centering
+    \includegraphics[height=0.8\textheight]{img/qr-code}
+\end{frame}
+
+
+\section{Referencias}
 %t: top aligned, allowframebreaks para crear automáticamente nuevas páginas de ser necesario
 \begin{frame}[t, allowframebreaks]
 \frametitle{Referencias}
