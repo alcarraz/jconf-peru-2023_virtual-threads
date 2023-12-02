@@ -2,7 +2,7 @@
 
 `code-with-cuarkus` contains the example code
 
-`presentacion` contains beamer presentation
+`presentacion` contains beamer presentation: [virtual-threads.pdf](presentacion/virtual-threads.pdf)
 
 ## Requirements
 
